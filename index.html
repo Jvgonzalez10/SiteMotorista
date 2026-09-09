@@ -27,13 +27,18 @@
             line-height: 1.6;
         }
 
-        /* Hero Section com a imagem do Painel do Carro */
+        /* Hero Section - Computador */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
                         url('Painel carro.jpeg') center/cover no-repeat;
             color: white;
             text-align: center;
             padding: 100px 20px 80px;
+            min-height: 420px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .hero h1 {
@@ -213,17 +218,67 @@
             margin-top: 30px;
         }
 
-        /* Responsividade */
+        /* ===================================================
+           REGRAS ESPECÍFICAS PARA CELULAR (Telas até 768px)
+           =================================================== */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 1.6rem;
+            .hero {
+                padding: 60px 15px 50px;
+                min-height: 300px;
             }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+                margin-bottom: 20px;
+            }
+
+            .container {
+                padding: 25px 15px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .service-card {
+                padding: 15px 10px;
+            }
+
+            .service-card i {
+                font-size: 1.8rem;
+            }
+
+            .service-card h3 {
+                font-size: 0.95rem;
+            }
+
+            .service-card p {
+                font-size: 0.8rem;
+            }
+
             .vehicle-section {
                 grid-template-columns: 1fr;
-                padding: 20px;
+                padding: 20px 15px;
+                gap: 20px;
             }
+
+            .cta-section {
+                padding: 35px 15px;
+            }
+
+            .cta-section h2 {
+                font-size: 1.4rem;
+            }
+
             .btn-whatsapp {
                 width: 100%;
+                padding: 14px 20px;
+                font-size: 1rem;
             }
         }
     </style>
